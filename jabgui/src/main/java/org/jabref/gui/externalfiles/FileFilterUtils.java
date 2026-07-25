@@ -110,7 +110,7 @@ public class FileFilterUtils {
     public static List<Path> sortByDate(List<Path> files, ExternalFileSorter sortType) {
         FileFilterUtils fileFilter = new FileFilterUtils();
         List<Path> sortedFiles = switch (sortType) {
-            case DEFAULT ->
+            case GROUPED_BY_DIRECTORY ->
                     files;
             case DATE_ASCENDING ->
                     fileFilter.sortByDateDescending(files);
